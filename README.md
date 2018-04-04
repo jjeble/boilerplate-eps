@@ -11,7 +11,7 @@ Each week you will need to implement a program (Term Frequency calculator) in di
 
 ## Running the project
 
-We will need to be able to run the project with the following command
+We will need to be able to run the project with the following command (assuming we are in the directory of the program, eg, `./week1/`):
 
-`$ [language_interpreter] your_program text_file`
+`$ ./build.sh && ./run.sh`
 
