@@ -15,3 +15,5 @@ We will need to be able to run the project with the following command (assuming 
 
 `$ ./build.sh && ./run.sh`
 
+
+There is a chance that for your chosen programming language you will need to modify the build and/or run script. If the language does not need to be compiled you can probably ignore the build script.
