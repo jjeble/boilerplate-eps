@@ -3,8 +3,8 @@
 import subprocess
 import os
 
-executables = ['tf-03.py', 'tf-05.py', 'tf-06.py']
-interpreter = ''
+executables = ['TFchecker']
+interpreter = 'java'
 text_file = 'pride-and-prejudice.txt'
 solution_file = 'pride-and-prejudice-solution.txt'
 
@@ -18,11 +18,15 @@ solution_loc = os.path.join(test_files_location, solution_file)
 output = None
 for exe in executables:
 	print('-------{}----------'.format(exe))
-	file_path = os.path.join(working_dir, exe)
-
+	
+        #print(file_path)
+        print(text_loc)
 	if interpreter == '':
+                file_path = os.path.join(working_dir, exe)
 		output = subprocess.check_output([file_path, text_loc]).splitlines()
+                
 	else:
+                file_path = exe
 		output = subprocess.check_output([interpreter, file_path, text_loc]).splitlines()
 
 	solution = ""
@@ -31,7 +35,7 @@ for exe in executables:
 
 	passing = True
 	for out, sol in zip(output, solution):
-
+                
 		if out == sol:
 			continue
 		else:
